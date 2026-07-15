@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LinguaAI | AI Language Translator</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animations.css') }}">
+
+</head>
+
+<body>
+
+    <main class="app">
+
+        <div class="container">
+
+            <!-- Hero Section -->
+
+            <header class="hero">
+
+                <h1 class="logo">
+                    LinguaAI
+                </h1>
+
+                <p class="subtitle">
+                    AI-Powered Language Translator
+                </p>
+
+                <p class="description">
+                    Translate text quickly and accurately between multiple languages.
+                </p>
+
+            </header>
+
+            <!-- Translator Card -->
+
+            <section class="translator-card">
+
+                <!-- Language Selection -->
+
+                <div class="language-row">
+
+                    <div class="language-box">
+
+                        <label for="source-language">
+                            Source Language
+                        </label>
+
+                        <select id="source-language"></select>
+
+                    </div>
+
+                    <button
+                        id="swap-btn"
+                        class="swap-btn"
+                        type="button">
+
+                        ⇄
+
+                    </button>
+
+                    <div class="language-box">
+
+                        <label for="target-language">
+                            Target Language
+                        </label>
+
+                        <select id="target-language"></select>
+
+                    </div>
+
+                </div>
+
+                <!-- Translation Area -->
+
+                <div class="translation-area">
+
+                    <!-- Input Panel -->
+
+                    <div class="panel">
+
+                        <div class="panel-header">
+
+                            <label for="input-text">
+                                Input
+                            </label>
+
+                            <button
+                                id="listen-input-btn"
+                                class="listen-btn"
+                                type="button"
+                                aria-label="Listen to input">
+
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                     width="20"
+                                     height="20"
+                                     viewBox="0 0 24 24"
+                                     fill="none"
+                                     stroke="currentColor"
+                                     stroke-width="2"
+                                     stroke-linecap="round"
+                                     stroke-linejoin="round">
+
+                                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+
+                                    <path d="M15.5 8.5a5 5 0 0 1 0 7"></path>
+
+                                    <path d="M19 5a10 10 0 0 1 0 14"></path>
+
+                                </svg>
+
+                            </button>
+
+                        </div>
+
+                        <textarea
+                            id="input-text"
+                            maxlength="5000"
+                            placeholder="Enter text..."></textarea>
+
+                    </div>
+
+                    <!-- Translation Panel -->
+
+                    <div class="panel">
+
+                        <div class="panel-header">
+
+                            <label for="translated-text">
+                                Translation
+                            </label>
+
+                            <button
+                                id="listen-output-btn"
+                                class="listen-btn"
+                                type="button"
+                                aria-label="Listen to translation">
+
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                     width="20"
+                                     height="20"
+                                     viewBox="0 0 24 24"
+                                     fill="none"
+                                     stroke="currentColor"
+                                     stroke-width="2"
+                                     stroke-linecap="round"
+                                     stroke-linejoin="round">
+
+                                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+
+                                    <path d="M15.5 8.5a5 5 0 0 1 0 7"></path>
+
+                                    <path d="M19 5a10 10 0 0 1 0 14"></path>
+
+                                </svg>
+
+                            </button>
+
+                        </div>
+
+                        <textarea
+                            id="translated-text"
+                            readonly
+                            placeholder="Translation..."></textarea>
+
+                    </div>
+
+                </div>
+
+                <!-- Character Counter -->
+
+                <div class="character-row">
+
+                    <span id="character-count">
+                        0 / 5000
+                    </span>
+
+                </div>
+
+                <!-- Translate Button -->
+
+                <div class="translate-row">
+
+                    <button
+                        id="translate-btn"
+                        type="button">
+
+                        Translate
+
+                    </button>
+
+                </div>
+
+                <!-- Loading Indicator -->
+
+                <div
+                    id="loading"
+                    class="loading"
+                    hidden>
+
+                    Translating...
+
+                </div>
+
+                <!-- Toolbar -->
+
+                <div class="toolbar">
+                                        <button
+                        id="copy-btn"
+                        type="button">
+
+                        Copy
+
+                    </button>
+
+                    <button
+                        id="download-btn"
+                        type="button">
+
+                        Download
+
+                    </button>
+
+                    <button
+                        id="clear-btn"
+                        type="button">
+
+                        Clear
+
+                    </button>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+    <!-- UI -->
+    <script src="{{ url_for('static', filename='js/ui.js') }}"></script>
+
+    <!-- Translation -->
+    <script src="{{ url_for('static', filename='js/translator.js') }}"></script>
+
+</body>
+
+</html>

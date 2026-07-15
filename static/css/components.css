@@ -1,0 +1,304 @@
+/* ==========================================
+   TRANSLATOR CARD
+========================================== */
+
+.translator-card {
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    box-shadow: var(--shadow);
+
+    padding: 35px;
+
+}
+
+
+/* ==========================================
+   LANGUAGE ROW
+========================================== */
+
+.language-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr auto 1fr;
+
+    gap: 20px;
+
+    align-items: end;
+
+    margin-bottom: 30px;
+
+}
+
+.language-box {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+/* ==========================================
+   SWAP BUTTON
+========================================== */
+
+.swap-btn {
+
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    font-size: 20px;
+
+    color: var(--primary);
+
+    transition: .25s;
+
+}
+
+.swap-btn:hover {
+
+    background: var(--primary);
+
+    color: white;
+
+    border-color: var(--primary);
+
+}
+
+
+/* ==========================================
+   TRANSLATION AREA
+========================================== */
+
+.translation-area {
+
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 25px;
+
+}
+
+.panel {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+/* ==========================================
+   PANEL HEADER
+========================================== */
+
+.panel-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 10px;
+
+}
+
+.panel-header label {
+
+    margin: 0;
+
+}
+
+
+/* ==========================================
+   LISTEN BUTTON
+========================================== */
+
+.listen-btn {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 32px;
+
+    height: 32px;
+
+    background: transparent;
+
+    border: none;
+
+    border-radius: 50%;
+
+    color: var(--text-light);
+
+    cursor: pointer;
+
+    transition: all .25s ease;
+
+}
+.listen-btn {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 32px;
+
+    height: 32px;
+
+    background: transparent;
+
+    border: none;
+
+    border-radius: 50%;
+
+    color: var(--text-light);
+
+    cursor: pointer;
+
+    transition:
+        background-color .25s ease,
+        color .25s ease,
+        transform .2s ease;
+
+}
+
+.listen-btn:hover {
+
+    background: rgba(147, 197, 253, 0.18);
+
+    color: var(--primary);
+
+}
+
+.listen-btn:active {
+
+    transform: scale(0.95);
+
+}
+
+.listen-btn:focus-visible {
+
+    outline: 2px solid var(--primary);
+
+    outline-offset: 2px;
+
+}
+
+.listen-btn svg {
+
+    width: 20px;
+
+    height: 20px;
+
+}
+
+.panel textarea {
+
+    flex: 1;
+
+}
+
+
+/* ==========================================
+   CHARACTER ROW
+========================================== */
+
+.character-row {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin-top: 12px;
+
+    color: var(--text-light);
+
+    font-size: .9rem;
+
+}
+
+
+/* ==========================================
+   TRANSLATE BUTTON
+========================================== */
+
+.translate-row {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin: 30px 0;
+
+}
+
+
+/* ==========================================
+   TOOLBAR
+========================================== */
+
+.toolbar {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width:900px){
+
+    .translation-area{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .language-row{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .swap-btn{
+
+        margin:auto;
+
+        transform:rotate(90deg);
+
+    }
+
+    .toolbar{
+
+        justify-content:center;
+
+    }
+
+}

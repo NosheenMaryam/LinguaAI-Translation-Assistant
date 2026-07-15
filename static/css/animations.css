@@ -1,0 +1,189 @@
+/* ==========================================
+   GLOBAL TRANSITIONS
+========================================== */
+
+* {
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* ==========================================
+   TRANSLATOR CARD
+========================================== */
+
+.translator-card:hover {
+
+    box-shadow: 0 18px 45px rgba(0, 31, 84, 0.10);
+
+}
+
+
+/* ==========================================
+   BUTTON HOVER
+========================================== */
+
+button:hover {
+
+    transform: translateY(-2px);
+
+}
+
+button:active {
+
+    transform: scale(0.97);
+
+}
+
+
+/* ==========================================
+   INPUT FOCUS
+========================================== */
+
+textarea:focus,
+select:focus {
+
+    box-shadow: 0 0 0 4px rgba(0, 31, 84, 0.08);
+
+}
+
+
+/* ==========================================
+   TEXTAREA HOVER
+========================================== */
+
+textarea:hover,
+select:hover {
+
+    border-color: var(--primary);
+
+}
+
+
+/* ==========================================
+   TOOLBAR BUTTONS
+========================================== */
+
+.toolbar button:hover {
+
+    box-shadow: 0 8px 18px rgba(0, 31, 84, 0.15);
+
+}
+
+
+/* ==========================================
+   SWAP BUTTON
+========================================== */
+
+.swap-btn:hover {
+
+    transform: rotate(180deg);
+
+}
+
+
+/* ==========================================
+   TRANSLATE BUTTON
+========================================== */
+
+#translate-btn:hover {
+
+    box-shadow: 0 12px 24px rgba(0, 31, 84, 0.20);
+
+}
+
+
+/* ==========================================
+   FADE-IN ANIMATION
+========================================== */
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================
+   PAGE LOAD
+========================================== */
+
+.hero,
+.translator-card {
+
+    animation: fadeIn 0.8s ease;
+
+}
+
+
+/* ==========================================
+   LOADING SPINNER
+========================================== */
+
+.loader {
+
+    width: 28px;
+    height: 28px;
+
+    border: 3px solid #E5E7EB;
+    border-top: 3px solid var(--primary);
+
+    border-radius: 50%;
+
+    animation: spin 1s linear infinite;
+
+}
+
+
+@keyframes spin {
+
+    from {
+
+        transform: rotate(0deg);
+
+    }
+
+    to {
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+
+/* ==========================================
+   LOADING CONTAINER
+========================================== */
+
+.loading-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 20px;
+
+    color: var(--text-light);
+
+}
