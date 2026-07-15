@@ -111,7 +111,7 @@ Browser Playback
 ## 1. Clone Repository
 
 ```bash
-git clone your-github-repository-link
+ git clone https://github.com/NosheenMaryam/LinguaAI-Translation-Assistant.git
 ```
 
 ## 2. Navigate to Project Directory
@@ -209,15 +209,11 @@ The generated audio is processed by the Flask backend and played directly in the
 
 ## Screenshots
 
-Add application screenshots here:
+## Screenshots
 
-```
-Translator Interface
-Text-to-Speech Feature
-Responsive Design
-```
+### LinguaAI Translator Interface
 
----
+![LinguaAI Interface](static/images/linguaai-interface.png.jpeg)
 
 ## Author
 
