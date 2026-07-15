@@ -209,11 +209,10 @@ The generated audio is processed by the Flask backend and played directly in the
 
 ## Screenshots
 
-## Screenshots
+### LinguaAI Interface
 
-### LinguaAI Translator Interface
+![LinguaAI Interface](static/images/linguaai-interface.png)
 
-![LinguaAI Interface](static/images/linguaai-interface.png.jpeg)
 
 ## Author
 
